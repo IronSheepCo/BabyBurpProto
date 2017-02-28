@@ -1,5 +1,6 @@
 package tech.ironsheep.babyburpproto
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         add_child.setOnClickListener {
+            val intent = Intent(this, AddChildActivity::class.java)
+            startActivity(intent)
         }
     }
 }

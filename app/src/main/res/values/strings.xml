@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BabyBurpProto</string>
+    <string name="title_activity_add_child">Adaugă copil</string>
 </resources>
