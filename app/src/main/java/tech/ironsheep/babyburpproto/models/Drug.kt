@@ -1,6 +1,6 @@
 package tech.ironsheep.babyburpproto.models
 
-import java.util.*
+
 
 /**
  * Created by armis on 2/28/2017.
@@ -11,5 +11,5 @@ data class Drug(var name: String, var span: Int, var dose: String, var icon: Str
     var noon = false
     var evening = false
     var startingHour = 9
-    var intervar = 6
+    var interval = 6
 }
