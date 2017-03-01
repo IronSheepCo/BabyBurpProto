@@ -24,8 +24,24 @@ class AddChildActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            var error = ""
+
+            if( childName.text.isEmpty())
+                error += "Alegeți un nume.\n"
+
+            if( dob.text.isEmpty())
+                error += "Alegeți data nașterii.\n"
+
+            if( error != "" ) {
+                Snackbar.make(view, error, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+            }
+            else {
+                //move to previous activity
+
+                //write to persistent storage
+                finish()
+            }
         }
 
         val updateData = {
