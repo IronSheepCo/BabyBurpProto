@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">BabyBurpProto</string>
     <string name="title_activity_add_child">Adaugă copil</string>
+    <string-array name="genders_array">
+        <item>Băiat</item>
+        <item>Fată</item>
+    </string-array>
 </resources>
