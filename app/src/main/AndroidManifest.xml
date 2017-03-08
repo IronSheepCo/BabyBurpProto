@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -23,7 +23,10 @@
         <activity
             android:name=".AddChildActivity"
             android:label="@string/title_activity_add_child"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditChildTreatmentsActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
