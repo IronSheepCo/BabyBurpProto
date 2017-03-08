@@ -5,6 +5,7 @@ import org.junit.Test
 import tech.ironsheep.babyburpproto.models.Child
 
 import org.junit.Assert.*
+import tech.ironsheep.babyburpproto.models.Data
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -15,7 +16,8 @@ class JSONUnitTest {
     @Test
     @Throws(Exception::class)
     fun readChildFromJSON() {
-        val child = Child.createFromJSON(json = """ {
+
+        val json = """ {
             "name":"Mitica",
             "sex":"M",
             "birthDate":"2000-12-12",
@@ -57,7 +59,18 @@ class JSONUnitTest {
                 }
             ]
 }
-                """)
+                """
+
+        val child = Child.createFromJSON(json)
         assertEquals(child.name, "Mitica")
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun readChildrenFromJSON() {
+
+        val json: String = ""
+        var data:Data = Data.createFromJSON(json)
+        print(data.toJSON())
     }
 }

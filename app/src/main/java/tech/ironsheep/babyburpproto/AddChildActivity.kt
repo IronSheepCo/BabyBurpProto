@@ -2,15 +2,14 @@ package tech.ironsheep.babyburpproto
 
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
-import android.view.View
 import android.widget.DatePicker
 
 import kotlinx.android.synthetic.main.activity_add_child.*
 import kotlinx.android.synthetic.main.content_add_child.*
+import tech.ironsheep.babyburpproto.models.Child
+import tech.ironsheep.babyburpproto.models.Storage
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,9 +36,16 @@ class AddChildActivity : AppCompatActivity() {
                         .setAction("Action", null).show()
             }
             else {
-                //move to previous activity
 
                 //write to persistent storage
+                val child:Child = Child(childName.text.toString(), genderSpinner.selectedItem.toString(), Date(dob.text.toString()))
+
+                Storage.addChild(child).save()
+
+                //move to previous activity
+                //val intent = Intent(this, MainActivity::class.java)
+                //startActivity(intent)
+
                 finish()
             }
         }
