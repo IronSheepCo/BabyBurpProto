@@ -31,7 +31,7 @@ class AddChildActivity : AppCompatActivity() {
         getSupportActionBar()?.setHomeButtonEnabled(true)
 
         // click listener for floating action button (fab)
-        fab.setOnClickListener { view ->
+        addTreatment.setOnClickListener { view ->
             var error = ""
 
             if( childName.text.isEmpty())
