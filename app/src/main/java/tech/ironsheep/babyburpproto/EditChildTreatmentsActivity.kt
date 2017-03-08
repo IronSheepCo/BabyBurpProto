@@ -1,11 +1,7 @@
 package tech.ironsheep.babyburpproto
 
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
-import android.view.View
 import kotlinx.android.synthetic.main.activity_edit_child_treatments.*
 import tech.ironsheep.babyburpproto.models.Child
 import tech.ironsheep.babyburpproto.models.Storage
