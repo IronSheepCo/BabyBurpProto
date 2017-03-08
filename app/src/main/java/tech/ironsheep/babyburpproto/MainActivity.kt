@@ -20,6 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("BabyBurp", Storage.data.toJSON())
 
+        refreshChildList()
+
+        add_child.setOnClickListener {
+            val intent = Intent(this, AddChildActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun refreshChildList() {
         //select baby names
         val childNames = Storage.data.children.map { it -> it.name }
         //create adapter
@@ -33,10 +42,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    }
 
-        add_child.setOnClickListener {
-            val intent = Intent(this, AddChildActivity::class.java)
-            startActivity(intent)
-        }
+    override fun onResume() {
+        super.onResume()
+        refreshChildList()
     }
 }
