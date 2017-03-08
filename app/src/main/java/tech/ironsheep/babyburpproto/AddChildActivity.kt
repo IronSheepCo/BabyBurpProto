@@ -22,7 +22,7 @@ class AddChildActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_child)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        addTreatment.setOnClickListener { view ->
             var error = ""
 
             if( childName.text.isEmpty())
