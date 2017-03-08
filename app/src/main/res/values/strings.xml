@@ -5,4 +5,5 @@
         <item>Băiat</item>
         <item>Fată</item>
     </string-array>
+    <string name="action_settings">Settings</string>
 </resources>
