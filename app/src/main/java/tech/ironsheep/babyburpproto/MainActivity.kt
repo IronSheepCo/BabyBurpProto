@@ -26,6 +26,14 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, childNames)
         childListView.setAdapter(adapter)
 
+        childListView.setOnItemClickListener { adapterView, view, index, l ->
+            run {
+                val intent = Intent(this, EditChildTreatmentsActivity::class.java)
+                intent.putExtra("childIndex", index)
+                startActivity(intent)
+            }
+        }
+
         add_child.setOnClickListener {
             val intent = Intent(this, AddChildActivity::class.java)
             startActivity(intent)
