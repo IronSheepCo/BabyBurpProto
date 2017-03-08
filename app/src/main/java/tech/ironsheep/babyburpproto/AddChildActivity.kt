@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.view.MenuItem
 import android.widget.DatePicker
 
 import kotlinx.android.synthetic.main.activity_add_child.*
@@ -17,11 +18,19 @@ class AddChildActivity : AppCompatActivity() {
 
     var calendar = Calendar.getInstance()
 
+    /**
+     * Activity ctor()
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_child)
         setSupportActionBar(toolbar)
 
+        // display a back button in the menu
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar()?.setHomeButtonEnabled(true)
+
+        // click listener for floating action button (fab)
         fab.setOnClickListener { view ->
             var error = ""
 
@@ -39,13 +48,9 @@ class AddChildActivity : AppCompatActivity() {
 
                 //write to persistent storage
                 val child:Child = Child(childName.text.toString(), genderSpinner.selectedItem.toString(), Date(dob.text.toString()))
-
                 Storage.addChild(child).save()
 
-                //move to previous activity
-                //val intent = Intent(this, MainActivity::class.java)
-                //startActivity(intent)
-
+                // close this activity (return to home)
                 finish()
             }
         }
@@ -65,6 +70,9 @@ class AddChildActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Set date of birth label
+     */
     fun updateDOBLabel() {
         val format = "dd/MM/yyyy"
         val dateFormat = SimpleDateFormat( format, Locale.US )
@@ -72,4 +80,16 @@ class AddChildActivity : AppCompatActivity() {
         dob.setText( dateFormat.format( calendar.getTime() ) )
     }
 
+    /**
+     * Back button functionality
+     */
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
 }
