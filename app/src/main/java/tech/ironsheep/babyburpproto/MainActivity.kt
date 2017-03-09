@@ -22,19 +22,22 @@ class MainActivity : MenuActivity() {
 
         refreshChildList()
 
-        add_child.setOnClickListener {
+        btnAddChild.setOnClickListener {
             val intent = Intent(this, AddChildActivity::class.java)
             startActivity(intent)
         }
     }
 
     private fun refreshChildList() {
-        //select baby names
+
+        // select baby names
         val childNames = Storage.data.children.map { it -> it.name }
-        //create adapter
+
+        // create adapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, childNames)
         childListView.setAdapter(adapter)
 
+        // set click listener
         childListView.setOnItemClickListener { adapterView, view, index, l ->
             run {
                 val intent = Intent(this, EditChildTreatmentsActivity::class.java)
