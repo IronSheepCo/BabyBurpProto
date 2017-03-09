@@ -11,7 +11,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:scaleType="fitCenter"
-        android:src="@mipmap/ic_launcher" />
+        android:textColor="#ffffff"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:layout_width="fill_parent"
