@@ -26,6 +26,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EditChildTreatmentsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddTreatmentActivity"
+            android:label="@string/title_activity_add_treatment"
             android:theme="@style/AppTheme"></activity>
     </application>
 
