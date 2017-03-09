@@ -8,4 +8,53 @@
     tools:context="tech.ironsheep.babyburpproto.AddTreatmentActivity"
     tools:showIn="@layout/activity_add_treatment">
 
+    <GridLayout
+        android:layout_width="379dp"
+        android:layout_height="433dp"
+        android:columnCount="3"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="Detalii"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/treatmentNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_row="1"
+            android:contentDescription="Descriere"
+            android:ems="10"
+            android:hint="Descriere"
+            android:inputType="textPersonName"
+            android:paddingLeft="0dp" />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_row="2"
+            android:text="Durata"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="start|center"
+            android:layout_row="4"
+            android:text="Data inceput"
+            android:textSize="18sp" />
+
+    </GridLayout>
 </android.support.constraint.ConstraintLayout>

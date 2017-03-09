@@ -8,6 +8,11 @@
     tools:context="tech.ironsheep.babyburpproto.EditChildTreatmentsActivity"
     tools:showIn="@layout/activity_edit_child_treatments">
 
-
+    <ListView
+        android:id="@+id/treatmentListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </android.support.v4.widget.NestedScrollView>
