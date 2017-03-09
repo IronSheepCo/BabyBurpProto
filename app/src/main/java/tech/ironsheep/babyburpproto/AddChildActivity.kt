@@ -14,7 +14,7 @@ import tech.ironsheep.babyburpproto.models.Storage
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddChildActivity : AppCompatActivity() {
+class AddChildActivity : MenuActivity() {
 
     var calendar = Calendar.getInstance()
 
@@ -24,11 +24,6 @@ class AddChildActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_child)
-        setSupportActionBar(toolbar)
-
-        // display a back button in the menu
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar()?.setHomeButtonEnabled(true)
 
         // click listener for floating action button (fab)
         addChild.setOnClickListener { view ->
@@ -80,16 +75,5 @@ class AddChildActivity : AppCompatActivity() {
         dob.setText( dateFormat.format( calendar.getTime() ) )
     }
 
-    /**
-     * Back button functionality
-     */
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.getItemId()) {
-            android.R.id.home -> {
-                finish()
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
+
 }

@@ -10,7 +10,7 @@ import tech.ironsheep.babyburpproto.models.Storage
 import android.widget.ArrayAdapter
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : MenuActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

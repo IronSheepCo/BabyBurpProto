@@ -7,21 +7,18 @@
     android:fitsSystemWindows="true"
     tools:context="tech.ironsheep.babyburpproto.EditChildTreatmentsActivity">
 
-    <android.support.design.widget.AppBarLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <include layout="@layout/header"/>
 
-    </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/content_edit_child_treatments" />
 
-    <include layout="@layout/content_edit_child_treatments" />
+    </LinearLayout>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addTreatment"
