@@ -60,4 +60,11 @@ object Storage {
         file.writeText(contents)
     }
 
+    /**
+     * Clear json
+     */
+    fun clear() {
+        data.children.clear()
+        save()
+    }
 }
