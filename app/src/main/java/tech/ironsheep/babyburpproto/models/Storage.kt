@@ -45,7 +45,7 @@ object Storage {
     /**
      * Add new child
      */
-    open fun addChild(child: Child): Storage {
+    fun addChild(child: Child): Storage {
         data.addChild(child)
         return this
     }
