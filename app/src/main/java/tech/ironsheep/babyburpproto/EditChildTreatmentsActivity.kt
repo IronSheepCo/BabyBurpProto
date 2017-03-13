@@ -33,7 +33,7 @@ class EditChildTreatmentsActivity : MenuActivity() {
 
     override fun onResume() {
         super.onResume()
-
+        refreshTreatmentList()
     }
 
     /**
