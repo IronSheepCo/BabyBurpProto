@@ -6,6 +6,12 @@
         <item>Băiat</item>
         <item>Fată</item>
     </string-array>
+    <string-array name="drug_admin_types_array">
+        <item>La nr ore</item>
+        <item>Dupa masa</item>
+        <item>Inainte masa</item>
+    </string-array>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_treatment">AddTreatmentActivity</string>
+    <string name="title_activity_add_drug">AddDrugActivity</string>
 </resources>

@@ -13,6 +13,7 @@
             android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,6 +31,10 @@
         <activity
             android:name=".AddTreatmentActivity"
             android:label="@string/title_activity_add_treatment"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddDrugActivity"
+            android:label="@string/title_activity_add_drug"
             android:theme="@style/AppTheme"></activity>
     </application>
 
